@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+apply plugin: 'bintray-release'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 23
+    }
+}
+
+dependencies {
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'com.android.support:support-annotations:23.1.1'
+}
+
+publish {
+    repoName = 'maven'
+    groupId = 'com.ataulm'
+    artifactId = 'find-view-by-rx'
+    publishVersion = '1.0.0'
+    description = 'Another unnecessary rx library'
+    website = 'https://github.com/ataulm/find-view-by-rx'
+}
